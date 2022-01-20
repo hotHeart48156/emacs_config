@@ -2,13 +2,13 @@
 ;;                         ("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/"))
 ;;;      package-check-signature nil
 ;;;      load-prefer-newer t)
+(require 'package)
 (setq package-archives '(("gnu" . "http://mirrors.ustc.edu.cn/elpa/gnu/")
-;;;			 ("melpa" . "https://melpa.org/packages/")
-			 ("melpa" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
-                         ("melpa-stable" . "http://mirrors.ustc.edu.cn/elpa/melpa-stable/")
+			 ("melpa" . "http://mirrors.ustc.edu.cn/elpa/melpa/")		       
+;;			 ("melpa" . "https://melpa.org/packages/")
+			 ("melpa-stable" . "http://mirrors.ustc.edu.cn/elpa/melpa-stable/")
                          ("org" . "http://mirrors.ustc.edu.cn/elpa/org/")))
 
-(require 'package)
 (when (not package-archive-contents)
   (package-refresh-contents))
 ;;; initialize the packages, avoiding a re-initialization

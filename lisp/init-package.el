@@ -30,18 +30,22 @@
 (add-hook 'c++-mode-hook 'eglot-ensure)
 (setq company-global-modes '(not org-mode))
 ;;(setq company-clang-executable  "/usr/bin/clangd-12")
-
+(use-package rust-mode)
 (use-package lsp-mode
   :hook(
 	(python-mode . lsp-deferred)
 	(c++-mode . lsp-deferred)
+	(rust-mode . lsp-deferred)
 	(lsp-mode . lsp-enable-which-key-integration)
 	)
   :commands(lsp lsp-deferred)
   )
-
-  
-
+;;rustup component add rls
+;;(setq lsp-rust-server 'rust-analyzer)  
+;;(after! rustic
+;;(setq lsp-rust-server 'rust-analyzer)
+;;(setq rustic-lsp-server 'rust-analyzer)
+;;M-x lsp-describe-session and lsp-workspace-folders-add/remove
  ;;Settings for which-key - suggest next key
 (use-package which-key
   :defer nil

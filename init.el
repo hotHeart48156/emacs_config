@@ -10,4 +10,5 @@
 (require 'init-package)
 (require 'cmake-format)
 (require 'init-orgmode)
+(require 'init-markdown)
 (when  (file-exists-p  custom-file)(load-file  custom-file) )
