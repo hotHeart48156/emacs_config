@@ -9,9 +9,11 @@
 	("<M-up>" . 'drug-stuff-up)
 	("<M-down>" . 'drug-stuff-down)
 	))
-;;(use-package evil
+
+(use-package evil
   
-  ;;)
+  )
+;;(evil-mode 1)
 (use-package ace-window
   :bind(("M-o" . 'ace-window)))
 ;; Settings for company
